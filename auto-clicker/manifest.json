@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Button Clicker",
+  "description": "Simuliert einen Buttonklick auf einer bestimmten Seite.",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://ace-online.estargmbh.de/*"], 
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
